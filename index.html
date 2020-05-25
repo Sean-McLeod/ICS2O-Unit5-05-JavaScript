@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="time for school">
+    <meta name="keywords" content="math, boolean">
+    <meta name="author" content="sean mcleod">
+      <title>Time for School!</title>
+  </head>
+  <body>
+    <h1>What Should You Do?</h1>
+    <p>Please write down your age and the day in the textbox and then click the button.</p>
+    <p>Age</p>
+    <input id="a" type="text">
+    <br>
+    <br>
+    <p>Day(all letters lower case)</p>
+    <input id="c" type="text">
+    <br>
+    <br>
+    <button onclick="myfunction()">Click!</button>
+    <p id="b"></p>
+    <script>
+      function myfunction() {
+      var age
+      var day
+      age= document.getElementById("a").value
+      day= document.getElementById("c").value
+      if (age<18 && day == "monday" || day=="tuesday" || day== "wednesday" || day== "thursday" || day == "friday")
+      document.getElementById("b").innerHTML= "Time for School!"
+      else if (age>=18 && day == "monday" || day=="tuesday" || day== "wednesday" || day== "thursday" || day == "friday")
+      document.getElementById("b").innerHTML= "Time to go to work!"
+      else 
+      document.getElementById("b").innerHTML= "Time to relax for the weekend!"
+      
+      }
+    </script>
+  </body>
+</html>
